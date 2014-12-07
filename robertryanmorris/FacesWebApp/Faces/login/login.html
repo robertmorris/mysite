@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="login/login.css">
+
+<div id="home-controls-container" >
+	<h1>Welcome to Faces!</h1>
+	<div id="user-credentials" >
+		<input ng-model="credentials.uname" placeholder="Username" id="username-input" class="form-control">
+		<input ng-model="credentials.pass" placeholder="Password" type="password" id="password-input" class="form-control">
+		<div id="buttons-container" class="btn-group btn-group-justified" >
+			<button ng-click="register()" id="register-button" class="faces-btn btn btn-default">Register</button>
+			<button ng-click="log_in()" id="log-in-button" class="btn btn-default faces-btn">Log In</button>
+		</div>
+	</div>
+	<h3>Log in or register to continue.</h3>
+	<h4><em>"The best social networking site I've ever used!" - Everybody</em></h4>
+
+</div>

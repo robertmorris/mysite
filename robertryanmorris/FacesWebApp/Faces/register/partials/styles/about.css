@@ -1,0 +1,11 @@
+#about-me-input {
+
+}
+
+#about-me-container {
+	position: absolute;
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,136 @@
+.ng-enter, .ng-leave{
+	position: relative;
+}
+
+#info.ng-enter{
+  	transition:1.5s;
+  	left: -1000px;
+    opacity: 0;
+}
+
+#info.ng-enter-active {
+	left: 0px;
+ 	opacity: 1;
+}
+
+#info.ng-leave{
+	transition: 1.5s;
+	left: 0px;
+	top: -460px;
+	height:0px;
+    opacity: 1;
+}
+    
+#info.ng-leave-active {
+	left: 1000px;
+	top: -460px;
+	height: 0px;
+	opacity: 0;
+}
+
+#about.ng-enter{
+  	transition:1.5s;
+  	left: 1000px;
+    opacity: 0;
+}
+
+#about.ng-enter-active {
+	left: 0px;
+ 	opacity: 1;
+}
+
+#about.ng-leave{
+	transition: 1.5s;
+	left: 0px;
+	top: -308px;
+	height:0px;
+    opacity: 1;
+}
+    
+#about.ng-leave-active {
+	left: -1000px;
+	top: -308px;
+	height: 0px;
+	opacity: 0;
+}
+
+.register-input {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255,255,255,.90);
+}
+
+.form-validation-wrong {
+	display: inline;
+	position: absolute;
+	top: 9px;
+	color: rgb(255,0,0);
+}
+
+.form-validation-right {
+	display: inline;
+	position: absolute;;
+	top: 9px;
+	color: rgb(0,255,0);
+}
+
+#register-input:focus {
+	background-color: rgba(255,255,255,.95);
+}
+
+#new-user-information-container {
+	display: inline-block;
+	width: 90%;
+	max-width: 45em;
+}
+
+#register-controls-container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#new-user-information-container .input-group {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#next-button, #previous-button {
+	width: 20%;
+}
+
+#next-button.ng-hide, #previous-button.ng-hide {
+	display: inline!important;
+	opacity: 0;
+}
+
+#register-partials-view {
+	height: 40em;
+}
+
+#new-user-information-container .input-group-first {
+	margin-top: 0;
+}
+
+
+#new-user-information-container .input-group-last {
+	margin-bottom: 0;
+}
+
+#new-user-information-container .input-group-addon {
+	min-width: 11em;
+}
+
+#register-controls-container.input-group {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+#registration-complete-button {
+	width: 40%;
+	margin-top: .5em;
+}

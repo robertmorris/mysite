@@ -1,0 +1,76 @@
+.ng-enter, .ng-leave{
+	position: relative;
+}
+
+#me-container {
+	display: block;
+	width: 95%;
+	max-width: 60em;
+}
+
+#me-username-heading {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.profile-picture-lg {
+	margin-top: 5px;
+	min-height: 7em;
+	min-width: 10em;
+	max-width: 20em;
+	max-height: 20em;
+	border-radius: 3px;
+}
+
+.glyphicon-pencil {
+	opacity: .5;
+	background: rgba(0,0,0,0);
+	border-width: 0;
+}
+
+textarea{
+	resize: none;
+	overflow: auto;
+}
+
+#user-information-container {
+	display: inline-block;
+	text-align: center;
+	margin: 0  auto;
+}
+
+.me-button-container {
+	text-align: center;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.me-section-border {
+	width: 50%;
+}
+
+#wall_div{
+	float: left;
+}
+
+#friend_div{
+	float: right;
+}
+
+.no-pad {
+	padding: 0px;
+}
+
+.pad {
+	padding: 5px;
+}
+
+.margin-left-sm {
+	margin-left: 10px;
+}
+
+.no-pad-left {
+	padding-left: 0;
+}

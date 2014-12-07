@@ -1,0 +1,74 @@
+<link rel="stylesheet" type="text/css" href="me/me.css">
+
+<div class="container-fluid faces-container">
+    <div id="name_div" class="row row-border" style="background-color: #434343;">
+            <h2 id="me-username-heading">{{user.FirstName}} {{user.LastName}}</h2>
+    </div>
+
+    <div id="info_div" class="row row-border">
+        <img id="user_photo" class="profile-picture-lg col-xs-3" ng-src="{{user.ProfilePicture}}">
+
+        <div class="col-md-9">
+            <h5>From: </h5><span ng-hide="fromEditOn">{{user.City}}, {{user.State}}</span>
+            <button id="fromEdit" class="glyphicon glyphicon-pencil" title="Edit" ng-click="fromEditor()"/>
+            <input class="form-control" type="text" ng-model="user.City" ng-hide="!fromEditOn" ng-disabled="!fromEditOn"/>
+
+            <h5>Phone: </h5><span ng-hide="phoneEditOn">{{user.Phone}}</span>
+            <button id="phoneEdit" class="glyphicon glyphicon-pencil" title="Edit" ng-click="phoneEditor()"/>
+            <input id="phoneTextBox" type="text" ng-model="user.Phone" ng-hide="!phoneEditOn" ng-disabled="!phoneEditOn"/>
+
+            <h5>Birthday: </h5><span ng-hide="birthdayEditOn">{{user.DateOfBirth}}</span>
+            <button id="birthdayEdit" class="glyphicon glyphicon-pencil" title="Edit" ng-click="birthdayEditor()"/>
+            <input ng-model="user.DateOfBirth" ng-hide="!birthdayEditOn" ng-disabled="!birthdayEditOn"/>
+
+            <h5>About: </h5><span ng-hide="aboutEditOn">{{user.AboutMe}}</span>
+            <button id="aboutEdit" class="glyphicon glyphicon-pencil" title="Edit" ng-click="aboutEditor()"/>
+            <textarea class="form-control" ng-model="user.AboutMe" type="text" rows="10" maxlength="140" ng-hide="!aboutEditOn" />
+        </div>
+
+        <div class="col-xs-3 btn-group">
+            <input type="file" file-model="myFile" class="btn btn-default"/>
+            <button ng-click="uploadFile()" class="btn btn-default">Upload</button>
+        </div>
+    </div>
+
+    <div id="action_div" class="row row-border" style="margin-bottom: 10px; background-color: #434343;">
+        <div class="me-button-container col-xs-6">
+            <button class="btn btn-default faces-btn glyphicon glyphicon-align-left" title="New Post" ng-click="createNewPost()"></button>
+        </div>
+        <div class="me-button-container col-xs-6">
+            <button class="btn btn-default faces-btn glyphicon glyphicon-picture" title="Post Photo" ng-click="postNewPicture()"></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-8 no-pad-left">
+            <div class="panel panel-default" ng-repeat="post in posts | reverse" class="pad">
+                <div class="panel-heading">{{post.PosterFirstName}} {{post.PosterLastName}} <span style="float: right;">{{post.PostTime | date:'M/d/yy h:mm'}}</span></div>
+                <div class="panel-body">
+                    <div style="margin-bottom: 7px;" class="border-left-lite">{{post.Message}}</div>
+                    <div ng-repeat="comment in post.Comments" class="border-lite">
+                        <h6>{{comment.UserFirstName}} {{comment.UserLastName}} <span style="float: right;">{{comment.CommentDatetime | date: 'M/d/yy h:mm'}}</span></h6>
+                        <div style="padding-left: 8px;"><span>{{comment.CommentText}}</span></div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <form ng-submit="addComment(post)" novalidate>
+                        <input type="text" class="form-control" placeholder="Comment" style="height: 28px;" ng-model="post.commentText">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friends -->
+        <div class="list-group col-xs-4 no-pad" style="border-radius: .5em; margin: 0px;">
+            <span href="#" class="list-group-item active" style="background-color: #434343; border-color: #434343; border-radius: .5em; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;"> Friends
+            </span>
+            <div ng-repeat="friend in friends | orderBy: 'FirstName'" class="list-group-item">
+                <button class="btn-sm faces-btn" ng-click="viewFriend(friend)"><span class="glyphicon glyphicon-user"></span>&nbsp;{{friend.FirstName}} {{friend.LastName}}</button>
+                <h6>From:</h6> {{friend.City}}, {{friend.State}}
+                <h6>Phone:</h6> {{friend.Phone}}
+            </div>
+        </div>
+    </div>
+</div>

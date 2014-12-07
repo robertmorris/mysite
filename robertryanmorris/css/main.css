@@ -1,0 +1,175 @@
+
+
+.wrapper {
+
+    max-width: 30%;
+
+    height: auto;
+
+    width: auto;
+
+    margin: auto;
+
+    padding: 2;
+  
+
+}
+
+
+.box {
+
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 0;
+    text-align:;
+    padding-top:calc(50% - 30px);
+    background-color: gray;
+    border-color: black;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+    transition: all .15s ease-in-out;
+
+}
+
+
+.box:hover {
+
+    background: white;
+
+    z-index: 100;
+
+    transform: scale(1.2, 1.2);
+
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+
+}
+
+.box2 {
+
+
+    display: inline-block;
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: white;
+
+    z-index: 0;
+
+    margin: auto;
+
+    background-position: center;
+
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+
+    vertical-align: middle;
+
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+
+}
+
+.box3 {
+
+     display: inline-block;
+
+    position: relative;
+
+    width: 90%;
+
+    height: 50%;
+
+    background: white;
+
+    z-index: 0;
+
+    margin: auto;
+
+    background-position: center;
+
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+
+    vertical-align: middle;
+
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+
+.dummy {
+    margin-top: 100%;
+}
+.thumbnail1 {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align:center;
+    padding-top:calc(50% - 30px);
+    background-color: gray;
+    border-color: black;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+    transition: all .15s ease-in-out;
+
+}
+
+p{
+    color: black;
+}
+
+.thumbnail1:hover,
+.thumbnail1:hover a{
+    background: white;
+
+    z-index: 100;
+
+    transform: scale(1.2, 1.2);
+
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+.thumbnail2 {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 0;
+    text-align:center;
+    
+    background-color: white;
+    border-color: black;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+    transition: all .15s ease-in-out;
+
+}
+
+p{
+    color: black;
+}
+
+.thumbnail2:hover,
+.thumbnail2:hover a{
+    
+
+    z-index: 100;
+
+    transform: scale(1.2, 1.2);
+
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+
+   a:link {color: rgb(b);}
+    a:visited {color: rgb(w);}
+    a:hover {color: rgb(g);}
+    a:active {color: rgb(w);}
+
