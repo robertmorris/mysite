@@ -154,3 +154,25 @@ h3 {
 div {
 	color: #686868;
 }
+
+
+#fileInput {
+    display:none;
+}
+
+/* We could also just hide all file inputs like this:
+
+input[type=file] { 
+    display:none; 
+}
+
+*/
+
+/* hiding the fileName element until we actually select a file */
+#fileName {
+    display: none;
+}
+
+#uploadItBut {
+	display: none;
+}

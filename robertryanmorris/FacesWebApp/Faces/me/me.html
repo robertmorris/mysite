@@ -27,10 +27,17 @@
         </div>
 
         <div class="col-xs-3 btn-group">
-            <input type="file" file-model="myFile" class="btn btn-default"/>
-            <button ng-click="uploadFile()" class="btn btn-default">Upload</button>
+        <form>
+            <h5>Picture</h5>
+            <input type="file" id="fileInput" file-model="myFile">
+            <button id="chooseFile" class="glyphicon glyphicon-pencil"><i class="icon-file"></i></button>
+            <button id="fileName" type="submit" class="btn btn-primary" ng-click="uploadFile()"><i class="icon-upload icon-white"></i> Upload It!</button>
+        </form>
+        <p id="fileName">Name of the file to be uploaded</p>
         </div>
     </div>
+
+
 
     <div id="action_div" class="row row-border" style="margin-bottom: 10px; background-color: #434343;">
         <div class="me-button-container col-xs-6">

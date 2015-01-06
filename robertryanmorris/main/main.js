@@ -2,12 +2,13 @@
 
 var app = angular.module('MySite', [
 	'ngRoute',
-	'Site_Home'
+	'Site_Home',
+	'Site_Crawl'
 	]);
 
 app.constant('URLs', {
 	HOME: "/home",
-	ABOUT: "/about"
+	CRAWLER: "/myfirstcrawler"
 });
 
 app.config(['$routeProvider', 'URLs',
@@ -16,6 +17,10 @@ app.config(['$routeProvider', 'URLs',
 		when(URLs.HOME, {
 			templateUrl: 'home/home.html',
 			controller: 'HomeCtrl'
+		}).
+		when(URLs.CRAWLER, {
+			templateUrl: 'myfirstcrawler/mainForm.html',
+			controller: 'CrawlCtrl'
 		}).
 		otherwise({
 			redirectTo: URLs.HOME

@@ -74,3 +74,9 @@ textarea{
 .no-pad-left {
 	padding-left: 0;
 }
+
+input[type='file'] {
+  opacity:0    
+}
+
+
